@@ -538,19 +538,21 @@ body {
   border: 5px solid;
   border-color: antiquewhite;
   width: 70vw;
-  height: 40vh;
+  height: 45%;
+  /* Updated height */
   align-items: center;
   justify-content: start;
   left: 15vw;
 }
 
 .scrollBar {
-  top: 75vh;
+  top: 82vh;
   transform: translateY(-50%);
 }
 
 .scrollBarTop {
-  top: 30vh;
+  top: 35vh;
+  /* Adjusted to not overlap the h1 heading */
   transform: translateY(-50%);
 }
 
@@ -579,7 +581,8 @@ body {
   align-items: center;
   text-align: center;
   width: 15vw;
-  height: 35vh;
+  height: 90%;
+  /* Reduced height */
   background-color: rgba(255, 255, 255, 0.2);
   padding: 1vw;
   border-radius: 10px;
@@ -589,25 +592,29 @@ body {
 .pet-card img {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 50%;
+  /* Reduced height */
   object-fit: cover;
 }
 
 .pet-card .name {
   color: #000;
-  font-size: 3vh;
+  font-size: 2vh;
+  /* Reduced font size */
 }
 
 .pet-card .type,
 .pet-card .breed,
 .pet-card .age {
   color: #333;
-  font-size: 2vh;
+  font-size: 1.5vh;
+  /* Reduced font size */
 }
 
 .pet-card .date {
   color: #333;
-  font-size: 14px;
+  font-size: 1.2vh;
+  /* Reduced font size */
 }
 
 h1 {
@@ -617,5 +624,6 @@ h1 {
   font-size: 4vh;
   font-size: 4vw;
   color: blueviolet;
-  top: 5%;
+  top: 2%;
+  /* Adjusted to not be overlapped by the top scroll bar */
 }

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { fetchAnimals } from '../slices/animals';
 import { Animal } from '../../models/animal';
-import { format, parseISO } from 'date-fns';
 
 function SelectAnimals() {
   const animals = useAppSelector((state) => state.animals as Animal[]);
