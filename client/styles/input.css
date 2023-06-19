@@ -25,7 +25,7 @@ body {
     display: flex;
     overflow-x: auto;
     border: 5px solid;
-    border-color: antiquewhite;
+    border-color: #219ebc;
     width: 70vw;
     height: 45%; /* Updated height */
     align-items: center;
@@ -34,7 +34,7 @@ body {
 }
 
 .scrollBar {
-    top: 82vh;
+    top: 84vh;
     transform: translateY(-50%);
 }
 
@@ -82,19 +82,19 @@ body {
 }
 
 .pet-card .name {
-    color: #000;
+    color: #3e084e;
     font-size: 2vh; /* Reduced font size */
 }
 
 .pet-card .type,
 .pet-card .breed,
 .pet-card .age {
-    color: #333;
+    color: #023047;
     font-size: 1.5vh; /* Reduced font size */
 }
 
 .pet-card .date {
-    color: #333;
+    color: #023047;
     font-size: 1.2vh; /* Reduced font size */
 }
 
@@ -104,6 +104,6 @@ h1 {
     justify-content: center;
     font-size: 4vh;
     font-size: 4vw;
-    color: blueviolet;
+    color: #fb8500;
     top: 2%; /* Adjusted to not be overlapped by the top scroll bar */
 }
