@@ -1,26 +1,17 @@
-import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../hooks'
-import { fetchFruits } from '../slices/fruits'
+import { useState, useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from '../hooks';
+import { fetchAnimals } from '../slices/animals';
+import { Animal } from '../../models/animal';
+import { format } from 'date-fns';
+
+import DisplayAnimals from './DisplayAnimals';
 
 function App() {
-  const fruits = useAppSelector((state) => state.fruits)
-  const dispatch = useAppDispatch()
-  useEffect(() => {
-    dispatch(fetchFruits())
-  }, [dispatch])
-
   return (
-    <>
-      <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {fruits.map((fruit) => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-    </>
+    <div className='app'>
+      <DisplayAnimals />
+    </div>
   )
 }
 
-export default App
+export default App;

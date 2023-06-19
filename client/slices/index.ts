@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import fruits from './fruits'
+import animals from './animals'
 
 export default combineReducers({
-  fruits,
+  animals,
 })
