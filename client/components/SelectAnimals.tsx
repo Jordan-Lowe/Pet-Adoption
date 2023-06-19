@@ -13,7 +13,6 @@ function SelectAnimals() {
     dispatch(fetchAnimals());
   }, [dispatch]);
 
-  const sortedAnimals = [...animals].sort((a, b) => parseISO(b.published_at).getTime() - parseISO(a.published_at).getTime());
 
   const getImage = (animal: Animal, index: number) => {
     if (animal.photos[index]) {
@@ -26,9 +25,8 @@ function SelectAnimals() {
   return (
     <div className="app">
       <div id="Container">
-        <h1>Persistent Paws</h1>
         <div className="scrollBarTop">
-          {sortedAnimals.map((animal: Animal) => {
+          {animals.map((animal: Animal) => {
             const imageIndex = loadedImages[animal.id.toString()] || 0;
 
             if (imageIndex >= animal.photos.length) return null;
@@ -46,7 +44,7 @@ function SelectAnimals() {
                   <div className="type">{animal.type}</div>
                   <div className="breed">{animal.breeds.primary}</div>
                   <div className="age">{animal.age}</div>
-                  <div className="date">{format(parseISO(animal.published_at), 'PPpp')}</div>
+                  <div className="date">{animal.published_at}</div>
                 </div>
               </div>
             )
